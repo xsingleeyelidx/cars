@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛙設計_前端網頁工程師 甄選</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div id="app">
+    <img src="./images/icon.png" class="cs" alt="">
+    <header>
+        <div class="wrapper">
+            <div class="logo"><img src="./images/logo.png" alt=""></div>
+            <div>{{ time }}</div>
+            <div>
+                <select v-model="language">
+                    <option v-for="(option, index) in options" :key="index" :value="option"> {{ option }} </option>
+                </select>
+            </div>
+        </div class="wrapper">
+    </header>
+    <main>
+        <div class="wrapper">
+            <section>
+                <div>
+                    <img src="./images/text.png" alt="">
+                    <div>
+                        Choose the car as far as you can
+                    </div>
+                </div>
+            </section>
+            <section>
+                <p>Here?</p>
+                <img src="./images/cars.png" class="cars wow animate__zoomIn" data-wow-duration="0.5s" data-wow-delay="0s" data-wow-iteration="1">
+                <div class="l_r_cars">
+                    <img src="./images/car_left.png" class="wow animate__bounceInRight" data-wow-duration="0.5s" data-wow-delay="0.5s" data-wow-iteration="1">
+                    <img src="./images/car_right.png" class="wow animate__bounceInLeft" data-wow-duration="0.5s" data-wow-delay="0s" data-wow-iteration="1">
+                </div>
+                <form class="wow animate__fadeInDown" data-wow-duration="0.5s" data-wow-delay="0s" data-wow-iteration="1">
+                    <div class="login">
+                        <div>
+                            <input type="text" placeholder="amount">
+                        </div>
+                        <div>
+                            <input type="password" placeholder="password">
+                        </div>
+                    </div>
+                    <button type="button"><img src="./images/btn.png" alt=""></button>
+                </form>
+            </section>
+            <section>
+                <div>
+                    <img src="./images/bottom-left-car.png" class="wow animate__fadeInRight" data-wow-duration="0.5s" data-wow-delay="0s" data-wow-iteration="1">
+                </div>
+                <div>
+                    <img src="./images/bottom-center-car.png" class="wow animate__zoomIn" data-wow-duration="0.5s" data-wow-delay="0s" data-wow-iteration="1">
+                </div>
+                <div>
+                    <img src="./images/bottom-right-car.png" class="wow animate__fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0s" data-wow-iteration="1">
+                </div>
+            </section>
+        </div>
+    </main>
+    </div>
+    <footer>
+        <p>陳冠均 ｜ Champion Chen</p>
+        <p>Copyright © 2020 wataidesign.com</p>
+    </footer>
+</div>
+</body>
+<script src="./js/wow.min.js"></script>
+<script>new WOW().init();</script>
+<script src="./js/vue.global.js"></script>
+<script src="./js/index.js"></script>
+</html>
